@@ -17,11 +17,11 @@ app.use('/api', taskRoutes);
 
 
 
-
+//mongodb://localhost:27017/mean-app
 
 // MongoDB Connection
 mongoose
-  .connect('mongodb://localhost:27017/mean-app', { useNewUrlParser: true, useUnifiedTopology: true })
+  .connect('mongodb+srv://admin:<db_password>@bisalcluster.9crsvzy.mongodb.net/?retryWrites=true&w=majority&appName=bisalcluster', { useNewUrlParser: true, useUnifiedTopology: true })
   .then(() => console.log('MongoDB connected'))
   .catch((err) => console.error('MongoDB connection error:', err));
 
